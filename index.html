@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Harmonic Series Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!--Title-->
+        <div class="row">
+            <div class="col-md-12 mb-4 mt-4 text-light text-center">
+                <h1 class="display-1">Harmonic Series Calculator</h1>
+                <p class="lead">
+                    Frequencies are returned with only two decimal places; however, calculations are performed with all decimal places intact.
+                    <br>MIDI numbers produced by the table are rounded to. 
+                    <br>The adjustment column calculates the distance a frequency is in cents from is corresponding MIDI number.
+                </p>
+            </div>
+        </div>
+        <!--Input form-->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text-center">
+                    <p id="user-type-info" class="text-light"></p>
+                </div>
+            <div class="col-md-4 mb-5">
+                <div class="input-group">
+                    <input id="user-freq" type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Frequency i.e '440'">
+                    <input id="user-parts" type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Number of partials">
+                    <div id="type" class="input-group-append">
+                        <button id="user-type" class="btn btn-secondary text-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item">Otonality</a>
+                            <a class="dropdown-item">Utonality</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <!--Table-->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th scope="row">Partial</th>
+                            <th>Frequency</th>
+                            <th>MIDI #</th>
+                            <th>Keyboard Key</th>
+                            <th>Pitch</th>
+                            <th>Adjustment</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>    
+        </div>
+    </div>  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
