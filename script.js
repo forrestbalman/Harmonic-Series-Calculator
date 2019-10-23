@@ -73,8 +73,10 @@ function tableMaker(p) {
             $("tbody").append(`<tr>
                        <th scope="row">${i + 1}</th> \
                        <td>${utonalFreq(frequency, (i + 1)).toString() + "hz"}</td> \
-                       <td>${i}</td> \
-                       <td>${i}</td> \
+                       <td>${freqToMidi(frequency / (i + 1))}</td> \
+                       <td>${keyboardNumber(frequency / (i + 1))}</td> \
+                       <td>${midiToPitch(frequency / (i + 1))}</td> \
+                       <td>${adjustment(frequency / (i + 1))}</td> \
                        </tr>`);
         }
     }
